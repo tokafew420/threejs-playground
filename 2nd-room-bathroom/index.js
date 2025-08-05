@@ -210,6 +210,10 @@ loader.load('./model.glb',
                 child.name === 'Shower_Curb') {
                 child.material = floorTileMaterial;
             } else if (
+                child.name.startsWith('Soap_Box_Wall_Tile') ||
+                child.name === 'Wall_Tile010') {
+                child.material = wallAccentTileMaterial;
+            } else if (
                 child.name.startsWith('Wall_Tile') ||
                 child.name === 'Shower_Curb_Cap') {
                 child.material = wallTileMaterial;
@@ -222,8 +226,6 @@ loader.load('./model.glb',
                 child.name === 'Shower_Door_Fixed' ||
                 child.name === 'Shower_Door_Sliding') {
                 child.material = glassMaterial;
-            } else if (child.name.startsWith('Soap_Box_Wall_Tile')) {
-                child.material = wallAccentTileMaterial;
             } else if (child.name.startsWith('Tile_Trim')) {
                 child.material = goldMaterial;
             } else if (child.name === 'Window' || child.name === 'Soap_Box') {
