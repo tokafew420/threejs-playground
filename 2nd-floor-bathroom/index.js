@@ -98,10 +98,10 @@ addCeilingLight(scene, {
     x: -0.5,
     z: 0.5
 });
-addCeilingLight(scene, {
-    x: -0.5,
-    z: 0
-});
+// addCeilingLight(scene, {
+//     x: -0.5,
+//     z: 0
+// });
 addCeilingLight(scene, {
     x: -0.5,
     z: -0.5
@@ -210,8 +210,9 @@ loader.load('./model.glb',
                 child.name === 'Shower_Curb') {
                 child.material = floorTileMaterial;
             } else if (
-                child.name.startsWith('Soap_Box_Wall_Tile') ||
-                child.name === 'Wall_Tile010') {
+                child.name.startsWith('Soap_Box_Back') ||
+                child.name.startsWith('Soap_Box_Border') ||
+                child.name === 'Wall_Accent_Tile010') {
                 child.material = wallAccentTileMaterial;
             } else if (
                 child.name.startsWith('Wall_Tile') ||
