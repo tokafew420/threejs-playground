@@ -220,6 +220,8 @@ loader.load('./model.glb',
                 child.material = wallTileMaterial;
             } else if (
                 child.name === 'Shower_Door_Rail' ||
+                child.name === 'Shower_Door_Towel_Bar' ||
+                child.name === 'Shower_Door_Handle' ||
                 child.name.startsWith('Fastener') ||
                 child.name.startsWith('Roller')) {
                 child.material = blackMaterial;
